@@ -43,7 +43,7 @@ public class Hello extends HttpServlet {
 		ClientResponse clientResponse = service.path("rest").path("hello").path(name) .accept(MediaType.TEXT_HTML).get(ClientResponse.class);
 		
 		if (clientResponse.getStatus() != 200) {
-			   throw new RuntimeException("Failed : HTTP error code : "
+			   throw new RuntimeException("Failed : HTTP error code /: "
 				+ clientResponse.getStatus());
 		}
 
