@@ -40,16 +40,16 @@ public class Hello extends HttpServlet {
 		WebResource service = client.resource(getBaseURI()); 
 		
 		// request get
-		ClientResponse clientResponse = service.path("rest").path("hello").path(name) .accept(MediaType.TEXT_HTML).get(ClientResponse.class);
-		
-		if (clientResponse.getStatus() != 200) {
-			   throw new RuntimeException("Failed : HTTP error code : "
-				+ clientResponse.getStatus());
-		}
-
-		
+		ClientResponse clientResponse = service.path("player").path("findplayer").path(name) .accept(MediaType.TEXT_HTML).get(ClientResponse.class);
 		out.print(clientResponse);
 		
+		// output web
+		response.setContentType("text/html;charset-UTF-8");
+		out.print("<html>");
+		out.print("<body>");
+		out.println("hello "+name);
+		out.print("</body>");
+		out.print("</html>");
 		
 	}
     
