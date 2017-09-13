@@ -63,7 +63,7 @@ public class Hello extends HttpServlet {
 	}
 	
 	private static URI getBaseURI() { 
-		return UriBuilder.fromUri( "http://localhost:8080/RESTfulDemo/").build(); 
+		return UriBuilder.fromUri( "http://localhost:8080/tradefootball-server/fb/findplayer").build(); 
 	}
 
 
