@@ -40,18 +40,15 @@ public class Hello extends HttpServlet {
 		WebResource service = client.resource(getBaseURI()); 
 		
 		// request get
-<<<<<<< HEAD
+
 		ClientResponse clientResponse = service.path("player").path("findplayer").path(name) .accept(MediaType.TEXT_HTML).get(ClientResponse.class);
-=======
-		ClientResponse clientResponse = service.path("rest").path("hello").path(name) .accept(MediaType.TEXT_HTML).get(ClientResponse.class);
-		
+
 		if (clientResponse.getStatus() != 200) {
 			   throw new RuntimeException("Failed : HTTP error code /: "
 				+ clientResponse.getStatus());
 		}
 
 		
->>>>>>> branch 'master' of https://github.com/Linlijian/tradefootball-client.git
 		out.print(clientResponse);
 		
 		// output web
@@ -74,7 +71,7 @@ public class Hello extends HttpServlet {
 	}
 	
 	private static URI getBaseURI() { 
-		return UriBuilder.fromUri( "http://localhost:8080/tradefootball-server/fb/findplayer").build(); 
+		return UriBuilder.fromUri( "http://localhost:8080/tradefootball-server/fb").build(); 
 	}
 
 
