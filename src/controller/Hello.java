@@ -53,8 +53,14 @@ public class Hello extends HttpServlet {
 		ClientResponse clientResponse = service.path("player").path("findplayer").path(name) .accept(MediaType.TEXT_XML).get(ClientResponse.class);
 
 		if (clientResponse.getStatus() != 200) {
-			   throw new RuntimeException("Failed : HTTP error code /: "
-				+ clientResponse.getStatus());
+			out.print("<html>");
+			out.print("<body>");
+			out.print("<div>");
+			out.print("<h11>");
+			out.print("Search not fornd!!!");
+			out.print("/h1");
+			out.print("</body>");
+			out.print("</html>");
 		}
 
 		String outputFromXml =  clientResponse.getEntity(String.class);
@@ -71,24 +77,43 @@ public class Hello extends HttpServlet {
 	    } 
 	
 		NodeList nList  = doc.getElementsByTagName("player");
-		
+		response.setContentType("text/html;charset-UTF-8");
+		out.print("<html>");
+		out.print("<body>");
+		out.print("<center>");out.print("<h2>");out.print("Search Results");out.print("</h2>");out.print("</center>");
+		out.print("<center>");
+		out.print("<table border=1>");
+		out.print("<tr>");
+		out.print("<th>");out.print("Name");out.print("</th>");
+		out.print("<th>");out.print("Last name");out.print("</th>");
+		out.print("<th>");out.print("Number");out.print("</th>");
+		out.print("<th>");out.print("Weight");out.print("</th>");
+		out.print("<th>");out.print("Height");out.print("</th>");
+		out.print("<th>");out.print("Date");out.print("</th>");
+		out.print("<th>");out.print("Address");out.print("</th>");
+		out.print("<th>");out.print("Team");out.print("</th>");
+		out.print("<th>");out.print("position");out.print("</th>");
+		out.print("</tr>");
 		for (int temp = 0; temp < nList.getLength(); temp++) {
 			Node nNode = nList.item(temp);
 			System.out.println("\nCurrent Element :" + nNode.getNodeName());
 			if (nNode.getNodeType() == Node.ELEMENT_NODE) {
 				Element eElement = (Element) nNode;
-				
-				out.println(eElement.getElementsByTagName("name").item(0).getTextContent());
-				out.println(eElement.getElementsByTagName("lname").item(0).getTextContent());
-	
+				out.print("<h2>");
+				out.print("<td>");out.println(eElement.getElementsByTagName("name").item(0).getTextContent());out.print("</td>");
+				out.print("<td>");out.println(eElement.getElementsByTagName("lname").item(0).getTextContent());out.print("</td>");
+				out.print("<td>");out.println(eElement.getElementsByTagName("number").item(0).getTextContent());out.print("</td>");
+				out.print("<td>");out.println(eElement.getElementsByTagName("weight").item(0).getTextContent());out.print("</td>");
+				out.print("<td>");out.println(eElement.getElementsByTagName("height").item(0).getTextContent());out.print("</td>");
+				out.print("<td>");out.println(eElement.getElementsByTagName("D_M_Y").item(0).getTextContent());out.print("</td>");
+				out.print("<td>");out.println(eElement.getElementsByTagName("address").item(0).getTextContent());out.print("</td>");
+				out.print("<td>");out.println(eElement.getElementsByTagName("team").item(0).getTextContent());out.print("</td>");
+				out.print("<td>");out.println(eElement.getElementsByTagName("position").item(0).getTextContent());out.print("</td>");
+				out.print("</h2>");
 			}
 		}
-	
-		// output web
-		response.setContentType("text/html;charset-UTF-8");
-		out.print("<html>");
-		out.print("<body>");
-		out.println("hello "+name);
+		out.print("</table>");
+		out.print("</center>");
 		out.print("</body>");
 		out.print("</html>");
 		

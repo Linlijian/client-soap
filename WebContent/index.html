@@ -2,12 +2,30 @@
 <html>
 <head>
 <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <title>Foot Ball</title>
 </head>
 <body>
-	<form action="Hello" method="get">
-		<p>Input player name :</p><input type="text" name="name" value="">
-		<input type="submit" value="ส่ง">
+
+<div class="container">
+ <h2>Search player</h2>
+ <p>Name to search is <font color="red">case sensitive</p></font>
+	<form class="form-horizontal" action="Hello" method="get">
+		<div class="form-group">
+		<div class="col-md-3">
+		<p>Name :</p><input class="form-control"  type="text" name="name" value="">
+		</div>
+		</div>
+		<div class="form-group">
+		<div class="col-md-3">
+		<input class="btn btn-default" type="submit" value="ส่ง">
+		</div>
+		</div>
 	</form>
+	</div>
+
 </body>
 </html>
