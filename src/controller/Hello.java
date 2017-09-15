@@ -90,7 +90,6 @@ public class Hello extends HttpServlet {
 		out.print("<th>");out.print("Weight");out.print("</th>");
 		out.print("<th>");out.print("Height");out.print("</th>");
 		out.print("<th>");out.print("Date");out.print("</th>");
-		out.print("<th>");out.print("Address");out.print("</th>");
 		out.print("<th>");out.print("Team");out.print("</th>");
 		out.print("<th>");out.print("position");out.print("</th>");
 		out.print("</tr>");
@@ -106,7 +105,6 @@ public class Hello extends HttpServlet {
 				out.print("<td>");out.println(eElement.getElementsByTagName("weight").item(0).getTextContent());out.print("</td>");
 				out.print("<td>");out.println(eElement.getElementsByTagName("height").item(0).getTextContent());out.print("</td>");
 				out.print("<td>");out.println(eElement.getElementsByTagName("D_M_Y").item(0).getTextContent());out.print("</td>");
-				out.print("<td>");out.println(eElement.getElementsByTagName("address").item(0).getTextContent());out.print("</td>");
 				out.print("<td>");out.println(eElement.getElementsByTagName("team").item(0).getTextContent());out.print("</td>");
 				out.print("<td>");out.println(eElement.getElementsByTagName("position").item(0).getTextContent());out.print("</td>");
 				out.print("</h2>");
