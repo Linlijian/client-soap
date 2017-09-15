@@ -34,7 +34,6 @@ import com.sun.jersey.api.client.config.DefaultClientConfig;
 @WebServlet("/Hello")
 public class Hello extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
     protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
     	response.setContentType("text/html;charset-UTF-8");
