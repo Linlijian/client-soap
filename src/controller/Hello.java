@@ -95,6 +95,7 @@ public class Hello extends HttpServlet {
 		out.print("</tr>");
 		for (int temp = 0; temp < nList.getLength(); temp++) {
 			Node nNode = nList.item(temp);
+			out.print("<tr>");
 			System.out.println("\nCurrent Element :" + nNode.getNodeName());
 			if (nNode.getNodeType() == Node.ELEMENT_NODE) {
 				Element eElement = (Element) nNode;
@@ -109,6 +110,7 @@ public class Hello extends HttpServlet {
 				out.print("<td>");out.println(eElement.getElementsByTagName("position").item(0).getTextContent());out.print("</td>");
 				out.print("</h2>");
 			}
+			out.print("</tr>");
 		}
 		out.print("</table>");
 		out.print("</center>");
