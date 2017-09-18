@@ -91,6 +91,7 @@ public class Position extends HttpServlet {
 		out.print("<th>");out.print("Team");out.print("</th>");
 		out.print("<th>");out.print("position");out.print("</th>");
 		out.print("</tr>");
+		System.out.print(nList);
 		for (int temp = 0; temp < nList.getLength(); temp++) {
 			Node nNode = nList.item(temp);
 			out.print("<tr>");
