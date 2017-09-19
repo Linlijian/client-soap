@@ -36,7 +36,6 @@ public class Save extends HttpServlet {
     	
     	// value from web
     	String id = request.getParameter("id");
-    	String number = request.getParameter("number");
     	String name = request.getParameter("name");
     	String lname = request.getParameter("lname");
     	String age = request.getParameter("age");
@@ -45,11 +44,14 @@ public class Save extends HttpServlet {
     	String D_M_Y = request.getParameter("D_M_Y");
     	String team = request.getParameter("team");
     	String position = request.getParameter("position");
+    	String number = request.getParameter("number");
+    	String country = request.getParameter("country");
+    	String idteam = request.getParameter("idteam");
     	
     	System.out.println(id+" "+name+" "+number+" "+lname);
     	
     	MultivaluedMap queryParams = new MultivaluedMapImpl();
-    	queryParams.add("number", number);
+    	
 		queryParams.add("name", name);
 		queryParams.add("lname", lname);
     	queryParams.add("age", age);
@@ -58,6 +60,9 @@ public class Save extends HttpServlet {
     	queryParams.add("D_M_Y", D_M_Y);
 		queryParams.add("team", team);
 		queryParams.add("position", position);
+		queryParams.add("number", number);
+		queryParams.add("country", country);
+		queryParams.add("idteam", idteam);
 		
 		// request and response RESTful
 		ClientConfig config = new DefaultClientConfig(); 
