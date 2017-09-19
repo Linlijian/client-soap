@@ -78,7 +78,6 @@ public class Update extends HttpServlet {
 				
 				out.println("<form action=\"save\">");
 				out.println("<input type=\"hidden\" name=\"id\" value=\""+id+"\"><br>");
-				out.println("Number : <input type=\"text\" name=\"number\" value=\""+eElement.getElementsByTagName("number").item(0).getTextContent()+"\"><br>");
 				out.println("Name : <input type=\"text\" name=\"name\" value=\""+eElement.getElementsByTagName("name").item(0).getTextContent()+"\"><br>");
 				out.println("Last name : <input type=\"text\" name=\"lname\" value=\""+eElement.getElementsByTagName("lname").item(0).getTextContent()+"\"><br>");
 				out.println("Age : <input type=\"text\" name=\"age\" value=\""+eElement.getElementsByTagName("age").item(0).getTextContent()+"\"><br>");
@@ -87,6 +86,9 @@ public class Update extends HttpServlet {
 				out.println("Date : <input type=\"text\" name=\"D_M_Y\" value=\""+eElement.getElementsByTagName("D_M_Y").item(0).getTextContent()+"\"><br>");
 				out.println("Team : <input type=\"text\" name=\"team\" value=\""+eElement.getElementsByTagName("team").item(0).getTextContent()+"\"><br>");
 				out.println("Position : <input type=\"text\" name=\"position\" value=\""+eElement.getElementsByTagName("position").item(0).getTextContent()+"\"><br>");
+				out.println("Number : <input type=\"text\" name=\"number\" value=\""+eElement.getElementsByTagName("number").item(0).getTextContent()+"\"><br>");
+				out.println("Country : <input type=\"text\" name=\"country\" value=\""+eElement.getElementsByTagName("country").item(0).getTextContent()+"\"><br>");
+				out.println("_Idteam : <input type=\"text\" name=\"_idteam\" value=\""+eElement.getElementsByTagName("_idteam").item(0).getTextContent()+"\"><br>");
 				out.println("<input type=\"submit\" value=\"GO GO!!\">");
 				out.println("</form>");
 				
