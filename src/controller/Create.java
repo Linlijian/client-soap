@@ -37,7 +37,6 @@ public class Create extends HttpServlet {
 		out.print("<div class=\"container\">");
 		out.print("<div class=\"form-group\">");
 		out.println("<form action=\"save\">");
-		out.println("Number: <input type=\"text\" name=\"number\" class=\"form-control\" placeholder=\"Number\" value=\"\"><br>");
 		out.println("Name: <input type=\"text\" name=\"name\" class=\"form-control\" placeholder=\"Name\" value=\"\"><br>");
 		out.println("Last name : <input type=\"text\" name=\"lname\" class=\"form-control\" placeholder=\"Last name\" value=\"\"><br>");
 		out.println("Age : <input type=\"text\" name=\"age\" class=\"form-control\" placeholder=\"Age\" value=\"\"><br>");
@@ -46,6 +45,9 @@ public class Create extends HttpServlet {
 		out.println("Date: <input type=\"text\" name=\"D_M_Y\" class=\"form-control\" placeholder=\"Date_Month_Year\" value=\"\"><br>");
 		out.println("Team: <input type=\"text\" name=\"team\" class=\"form-control\" placeholder=\"Team\" value=\"\"><br>");
 		out.println("Position: <input type=\"text\" name=\"position\" class=\"form-control\" placeholder=\"Position\" value=\"\"><br>");
+		out.println("Number: <input type=\"text\" name=\"number\" class=\"form-control\" placeholder=\"Number\" value=\"\"><br>");
+		out.println("Country: <input type=\"text\" name=\"country\" class=\"form-control\" placeholder=\"country\" value=\"\"><br>");
+		out.println("_idteam: <input type=\"text\" name=\"_idteam\" class=\"form-control\" placeholder=\"_idteam\" value=\"\"><br>");
 		out.println("<input class=\"btn btn-success\" type=\"submit\" value=\"Create\">");
 		out.println("</form>");
 		out.println("</div>");
