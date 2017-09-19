@@ -90,6 +90,9 @@ public class Position extends HttpServlet {
 		out.print("<th>");out.print("Date");out.print("</th>");
 		out.print("<th>");out.print("Team");out.print("</th>");
 		out.print("<th>");out.print("position");out.print("</th>");
+		out.print("<th>");out.print("number");out.print("</th>");
+		out.print("<th>");out.print("country");out.print("</th>");
+		out.print("<th>");out.print("_idteam");out.print("</th>");
 		out.print("</tr>");
 		System.out.print(nList);
 		for (int temp = 0; temp < nList.getLength(); temp++) {
