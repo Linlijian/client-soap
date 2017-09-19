@@ -56,7 +56,7 @@ public class Delete extends HttpServlet {
 		out.println("<center>");
 		out.println("<h2>O K _ S I R</h2>");
 		out.println(result+"<br><br>");
-		out.println("<a href=\"index.html\">Back Index</a>");
+		out.println("<a href=\"fn.html\">Back Index</a>");
 		out.println("</center>");
 		
 		out.println("</body>");
