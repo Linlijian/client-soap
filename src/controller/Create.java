@@ -31,7 +31,7 @@ public class Create extends HttpServlet {
 		// out put web
     	
 		out.print("<html>");
-		out.println("<head><base href=\"http://localhost:8080/tradefootball-client/\"><link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\"><script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\"></script></head>");
+		out.println("<head><base href=\"http://localhost:8080/tradefootball-client/\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"><link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\"><script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js\"></script><script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\"></script></head>");
 		out.print("<body>");
 		
 		out.print("<div class=\"container\">");
@@ -46,7 +46,7 @@ public class Create extends HttpServlet {
 		out.println("Date: <input type=\"text\" name=\"D_M_Y\" class=\"form-control\" placeholder=\"Date_Month_Year\" value=\"\"><br>");
 		out.println("Team: <input type=\"text\" name=\"team\" class=\"form-control\" placeholder=\"Team\" value=\"\"><br>");
 		out.println("Position: <input type=\"text\" name=\"position\" class=\"form-control\" placeholder=\"Position\" value=\"\"><br>");
-		out.println("<input class=\"btn btn-success\" type=\"submit\" value=\"GO!\">");
+		out.println("<input class=\"btn btn-success\" type=\"submit\" value=\"Create\">");
 		out.println("</form>");
 		out.println("</div>");
 		out.println("</div>");
